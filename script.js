@@ -231,3 +231,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// initialize EmailJS
+(function () {
+  emailjs.init("RAvArmQ1Z0CGvIp_E");
+})();
+
+const formEmail = document.getElementById("contactForm");
+const successMessageEmail = document.getElementById("formSuccess");
+const submitBtnEmail = document.getElementById("submitBtn");
+
+formEmail.addEventListener("submit", function (e) {
+
+  e.preventDefault();
+
+  submitBtnEmail.disabled = true;
+
+  emailjs.sendForm(
+    "service_ynocq8o",
+    "template_qvt49xw",
+    this
+  )
+  .then(() => {
+
+    successMessageEmail.classList.remove("hidden");
+    formEmail.reset();
+    submitBtnEmail.disabled = false;
+
+  })
+  .catch((error) => {
+
+    console.log(error);
+    alert("Failed to send message");
+
+    submitBtnEmail.disabled = false;
+  });
+
+});
