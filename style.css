@@ -736,6 +736,9 @@ input, textarea { font: inherit; }
 .project-thumb {
   height: 190px;
   background: linear-gradient(135deg, var(--g1), var(--g2));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -1172,7 +1175,6 @@ input, textarea { font: inherit; }
 
   .about-stats { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
-  .projects-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .contact-wrapper { grid-template-columns: 1fr; gap: 32px; }
 }
@@ -1199,6 +1201,8 @@ input, textarea { font: inherit; }
   .hero-title { font-size: clamp(2rem, 8vw, 3rem); }
   .hero-visual { display: none; }
   .hero { min-height: auto; padding: 120px 0 60px; }
+
+  .projects-grid { grid-template-columns: 1fr; }
 
   .about-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .stat-card { padding: 24px 16px; }
