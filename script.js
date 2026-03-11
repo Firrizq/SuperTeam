@@ -1,7 +1,3 @@
-/* =========================================
-   SUPERTEAM PORTFOLIO — script.js
-   ========================================= */
-
 /* --- Theme Toggle --- */
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
@@ -204,7 +200,6 @@ form.addEventListener('submit', async (e) => {
 
   if (!isValid) return;
 
-  // Simulate sending (replace with real fetch to your backend/service)
   submitBtn.disabled = true;
   submitBtn.querySelector('.btn-text').textContent = 'Sending...';
 
@@ -219,7 +214,6 @@ form.addEventListener('submit', async (e) => {
   setTimeout(() => formSuccess.classList.add('hidden'), 6000);
 });
 
-/* --- Smooth scroll for anchor links --- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const target = document.querySelector(anchor.getAttribute('href'));
